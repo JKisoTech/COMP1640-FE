@@ -1,0 +1,122 @@
+.blog-detail{
+    .blog-detail-item{
+        .blog-detail-title{
+            // border-bottom: 1px solid $text-gray;
+            margin-bottom: 20px;
+            h2{
+                // margin: 20px 0 10px 0px;
+                margin-bottom: 10px;
+                color: $text-black;
+            }
+            p{
+                color: $text-gray;
+                // margin-bottom: 10px;
+                a{
+                    color: $text-gray !important;
+                    @include text-hovering;
+                }
+            }
+            
+        }
+        .blog-detail-img{
+            margin-top: 10px;
+        }
+        .blog-detail-conent{
+            margin: 40px 0px 0 0px;
+            p{
+                color: $text-black;
+                margin-bottom: 10px;
+            }
+            blockquote{
+                margin: 40px 0;
+                color: $text-gray;
+                padding: 5px 0 5px 30px;
+                border-left: 2px solid $bgn;
+            }
+        }
+        .blog-detail-cmt{
+            margin: 50px 0px 0 0px;
+            border-radius: 5px;
+            background-color: $text-white;
+            border: none!important;
+            h4{
+                padding: 20px 0 0 20px;
+            }
+            p{
+                color: $text-gray;
+                padding: 40px 0 60px 0;
+                display: flex;
+                justify-content: center;
+            }
+        }
+        .blog-detail-cmt2{
+            background-color: $text-white !important;
+            margin: 20px 0px 0 0px;
+            .card{
+                border: none!important;
+
+            }
+        }
+    }
+    
+}
+.related-blogs{
+    margin: 65px 0 25px 0;
+    h3{
+        margin-bottom: 25px;
+        padding: 10px 22px;
+        border-left: 4px solid $text-black;
+    }
+    #related-blg{
+        .related-blogs-item{
+            padding: 0 5px !important;
+            .related-blogs-detail{
+                a{
+                    h4{
+                        padding: 15px 0 10px 0;
+                        @include text-hovering;
+                    }
+                }
+                p{
+                    padding-right: 10px;
+                    color: $text-gray;
+                }
+            }
+        }
+        .blog-content-item{
+            padding: 0 5px;
+            margin-bottom: 35px;
+            flex-direction: column;
+    
+            .blog-content-img{
+                padding: 0;
+            }
+            .blog-content-detail{
+                background-color: $text-white;
+                padding: 30px 10px 0 25px;
+                p{
+                    font-size: 16px;
+                    
+                    color: $text-gray;
+                }
+                h2{
+                    
+                    font-weight: 700;
+                    margin: 10px 0 7px 0;
+                    a{
+                        @include text-hovering;
+                        
+                    }
+                }
+                #blog-btn{
+                    margin-top: 25px;
+                    color: $btn !important;
+                    font-weight: 600;
+                    padding-bottom: 15px
+                }
+            }
+        }
+    
+    }
+
+}
