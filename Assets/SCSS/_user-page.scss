@@ -72,7 +72,9 @@
                 .user-doc-infor{
                     margin-top: 30px;
                     h4{
-    
+                        a{
+                            @include text-hovering;
+                        }
                     }
                     p{
                         color: $text-gray;

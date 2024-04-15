@@ -1314,6 +1314,13 @@ a {
 .user-infor-page .user-information .user-infor .user-doc-details .user-doc-infor {
   margin-top: 30px;
 }
+.user-infor-page .user-information .user-infor .user-doc-details .user-doc-infor h4 a {
+  transition: all 0.5s;
+}
+.user-infor-page .user-information .user-infor .user-doc-details .user-doc-infor h4 a:hover {
+  transition: all 0.5s;
+  color: #E27A25 !important;
+}
 .user-infor-page .user-information .user-infor .user-doc-details .user-doc-infor p {
   color: #909090;
   padding-right: 50px;
