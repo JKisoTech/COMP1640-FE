@@ -1547,4 +1547,16 @@ a {
   margin: 0 5px;
   height: 40px;
   width: 40px;
+}
+
+.user-submit-form {
+  margin-top: 40px;
+}
+.user-submit-form label {
+  color: #181818;
+  font-weight: 600;
+}
+.user-submit-form .file-review iframe {
+  height: 560px;
+  background: #D9D9D9;
 }/*# sourceMappingURL=style.css.map */

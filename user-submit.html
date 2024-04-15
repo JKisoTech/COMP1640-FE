@@ -125,42 +125,55 @@
                                 <iframe
                                     src=""
                                     id="pdfViewer"
-                                    frameborder="0"
+                                    frameborder="1"
                                     scrolling="auto"
                                     height="100%"
                                     width="100%">
                                 </iframe>
                             </div>
                         </div>
-                        <div class="col-12">
-                            <iframe src='https://docs.google.com/document/d/1aClKPf_DoiUSP8AA7BX4_8hdkOIrFXaz/edit?usp=sharing&ouid=118199063466185619133&rtpof=true&sd=true' width='100%' height='650px' frameborder='0'></iframe>
-                        </div>
-    
+                    </div>
+                    <div class="col-12">
                     </div>
                 </div>
             </div>
         </form>
-        
         <script>
-            document.addEventListener('DOMContentLoaded', function() {
+            document.addEventListener('DOMContentLoaded', function () {
                 const fileInput = document.getElementById('fileInput');
                 const pdfViewer = document.getElementById('pdfViewer');
-    
-                fileInput.addEventListener('change', function(event) {
+                const officeViewer = document.getElementById('officeViewer');
+        
+                fileInput.addEventListener('change', function (event) {
                     const file = event.target.files[0];
                     const reader = new FileReader();
-    
-                    reader.onload = function(event) {
-                        const pdfUrl = event.target.result;
-                        pdfViewer.src = pdfUrl;
+        
+                    reader.onload = function (event) {
+                        const documentUrl = event.target.result;
+                        if (file.type === 'application/pdf') {
+                            // If it's a PDF file, set the PDF viewer source
+                            pdfViewer.src = documentUrl;
+                            // Reset the Office Viewer source
+                            officeViewer.src = '';
+                        } else if (file.type === 'application/msword' || file.type === 'application/vnd.openxmlformats-officedocument.wordprocessingml.document') {
+                            // If it's a DOC or DOCX file, set the Office Viewer source
+                            const officeViewerUrl = 'https://view.officeapps.live.com/op/embed.aspx?src=' + encodeURIComponent(documentUrl);
+                            officeViewer.src = officeViewerUrl;
+                            // Reset the PDF viewer source
+                            pdfViewer.src = '';
+                        } else {
+                            // Reset both viewers if the file type is unsupported
+                            pdfViewer.src = '';
+                            officeViewer.src = '';
+                            alert('Please upload either a PDF document or a Word document (DOC or DOCX).');
+                        }
                     };
-    
+        
                     reader.readAsDataURL(file);
                 });
             });
-            
-        </script>            
-
+        </script>
+        
     </main>    
     
 
