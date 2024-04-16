@@ -145,20 +145,30 @@
             document.addEventListener('DOMContentLoaded', function() {
                 const fileInput = document.getElementById('fileInput');
                 const pdfViewer = document.getElementById('pdfViewer');
-    
+                
                 fileInput.addEventListener('change', function(event) {
                     const file = event.target.files[0];
                     const reader = new FileReader();
-    
+            
                     reader.onload = function(event) {
-                        const pdfUrl = event.target.result;
-                        pdfViewer.src = pdfUrl;
+                        const fileType = file.type;
+                        const fileUrl = event.target.result;
+            
+                        if (fileType === 'application/pdf') {
+                            // Display PDF in the PDF viewer iframe
+                            pdfViewer.src = fileUrl;
+                        } else if (fileType === 'application/vnd.openxmlformats-officedocument.wordprocessingml.document') {
+                            // Display Word document using the Google Docs viewer
+                            pdfViewer.src = `https://view.officeapps.live.com/op/embed.aspx?src=${encodeURIComponent(fileUrl)}`;
+                        } else {
+                            // Unsupported file type, display an error message or handle it accordingly
+                            alert('Unsupported file type. Please upload a PDF or Word document.');
+                        }
                     };
-    
+            
                     reader.readAsDataURL(file);
                 });
             });
-            
         </script>            
 
     </main>    
