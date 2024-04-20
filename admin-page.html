@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="./Assets/SCSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sidebars/">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+
+</head>
+
+<body>
+    <header>
+        <!-- place navbar here -->
+        <div class="container-fluid logo">
+            <img src="./Assets/Image/logo1.png  " class="mx-auto d-block " alt="">
+        </div>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary admin-nav-header">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Admin Page</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Admin Name
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Action 2</a></li>
+                      <li><a class="dropdown-item" href="#">Action 3</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item"> 
+                    <a class="nav-link invisible" href="#">aaaa</a>
+                  </li>
+
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <main>    
+        <div class="container-fluid admin-infor-page">
+            <div class="row">
+                <div class="col-xl-3 col-lg-3 col-md-3 sidebar-admin ">
+                    <div class="admin-infor">
+                        <div class="d-flex">
+                            <div class="ms-3 sidebar-admin-infor ">
+                                <h3 class="text-capitalize ">Admin Name</h3>
+                                <p class="text-capitalize">Admin Roles</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="my-line">
+                    <div class="admin-function">
+                        <ul class="navbar-nav nav nav-tabs">
+                            <li class="nav-item">
+                                <a class="nav-link active text-capitalize" href="#admin-dashboard" data-bs-toggle="tab"><i class="fa-solid fa-user"></i>Dashboard</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-capitalize" href="#admin-user-manager" data-bs-toggle="tab"><i class="fa-solid fa-user"></i>User Management</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-capitalize" href="#admin-user-doc" data-bs-toggle="tab"><i class="fa-solid fa-book"></i>User Documents</a>
+                            </li>
+                        </ul>
+
+                </div>
+
+
+                    
+                </div>
+                <div class="col-xl-8 col-lg-8 col-md-8 admin-tabs">
+                    <div class="tab-content">
+                        <div class=" admin-dashboard tab-pane active" id="admin-dashboard">
+                            <h2 class="text-capitalize">Admin Dashboard</h2>
+
+                            <hr class="my-line">
+                            
+                            <div class="container-fluid pt-4 px-4">
+                                <div class="row g-4">
+                                    <div class="col-sm-12 col-xl-6">
+                                        <div class="bg-secondary text-center rounded p-4">
+                                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                                <h6 class="mb-0">Tổng số đóng góp theo từng Khoa trong năm hiện tại ( Bar chart)</h6>
+                                                <a href="">Show All</a>
+                                            </div>
+                                            <canvas id="worldwide-sales"></canvas>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-xl-6">
+                                        <div class="bg-secondary text-center rounded p-4">
+                                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                                <h6 class="mb-0">Tỉ lệ đóng góp của từng khoa trong năm hiện tại ( Pie chart)</h6>
+                                                <a href="">Show All</a>
+                                            </div>
+                                            <canvas id="salse-revenue"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                
+
+
+
+                        </div>
+                        <div class="admin-user-manager tab-pane" id="admin-user-manager">
+                            <h2 class="text-capitalize">User</h2>
+                            <hr class="my-line">
+                            <button type="button" class="btn btn-success text-capitalize ">Create new user</button>
+                            <div class="admin-user-details">
+                                <table class="table">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">First</th>
+                                        <th scope="col">Last</th>
+                                        <th scope="col">Handle</th>
+                                        <th scope="col">Sattus</th>
+                                        <th scope="col">Action</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>
+                                                <button type="button" class="btn btn-info">Active</button>
+                                                <button type="button" class="btn btn-secondary">Disabled</button>
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-danger">Edit</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>
+                                                <button type="button" class="btn btn-secondary">Active</button>
+                                                <button type="button" class="btn btn-warning">Disabled</button>
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-danger">Edit</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                  </table>
+                            </div>
+
+                            
+                            <div class="user-doc-details-num">
+                                <ul class="nav justify-content-center">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="#" aria-current="page">1</a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link disabled" href="#">2</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link disabled" href="#">3</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link disabled" href="#"><i class="fa-solid fa-angle-right"></i></a>
+                                    </li>
+                                </ul>
+                                
+                            </div>
+ 
+                        </div>
+                        <div class="admin-user-doc tab-pane" id="admin-user-doc">
+                            <h2 class="text-capitalize">User Document Manager</h2>
+                            <hr class="my-line">
+                            <div class="admin-user-doc">
+                                <table class="table">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">First</th>
+                                        <th scope="col">Last</th>
+                                        <th scope="col">Handle</th>
+                                        <th scope="col">Sattus</th>
+                                        <th scope="col">Action</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>
+                                                <button type="button" class="btn btn-info">Active</button>
+                                                <button type="button" class="btn btn-secondary">Disabled</button>
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-danger">Edit</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>
+                                                <button type="button" class="btn btn-secondary">Active</button>
+                                                <button type="button" class="btn btn-warning">Disabled</button>
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-danger">Edit</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                  </table>
+                            </div>
+
+                            
+                            <div class="user-doc-details-num">
+                                <ul class="nav justify-content-center">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="#" aria-current="page">1</a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link disabled" href="#">2</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link disabled" href="#">3</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link disabled" href="#"><i class="fa-solid fa-angle-right"></i></a>
+                                    </li>
+                                </ul>
+                                
+                            </div>
+
+                        </div>
+
+                        
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </main>    
+    
+
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+        crossorigin="anonymous"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"
+        integrity="sha512-WNZwVebQjhSxEzwbettGuQgWxbpYdoLf7mH+25A7sfQbbxKeS5SQ9QBf97zOY4nOlwtksgDA/czSTmfj4DUEiQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./Assets/JS/script.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"
+        integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js" integrity="sha512-L0Shl7nXXzIlBSUUPpxrokqq4ojqgZFQczTYlGjzONGTDAcLremjwaWv5A+EDLnxhQzY5xUZPWLOLqYRkY0Cbw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html>

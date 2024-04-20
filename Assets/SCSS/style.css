@@ -125,33 +125,30 @@ a {
 .popular-post {
   margin-top: 125px;
 }
-.popular-post .pp-content {
-  margin-bottom: 30px;
-  padding: 0 15%;
+.popular-post h2 {
+  margin-bottom: 20px;
 }
-.popular-post .pp-content a {
+.popular-post .pp-doc {
+  padding: 0 10px;
+}
+.popular-post .pp-doc a .blog-detail {
+  margin-top: 10px;
+}
+.popular-post .pp-doc a .blog-detail p {
+  font-size: 14px;
+  color: #909090;
+}
+.popular-post .pp-doc a .blog-detail h4 {
   transition: all 0.5s;
-  border: none;
   font-size: 24px;
   font-weight: 700;
-  border-radius: 50px;
-  padding: 14px 15px;
-  border: 1px solid #262626;
-  margin-right: 20px;
-  margin-top: 20px;
+  margin: 10px 0 7px 0;
 }
-.popular-post .pp-content a a {
+.popular-post .pp-doc a .blog-detail h4:hover {
   transition: all 0.5s;
+  color: #E27A25 !important;
 }
-.popular-post .pp-content a:hover {
-  color: #fff !important;
-  background-color: #E27A25;
-  transition: all 0.5s;
-}
-.popular-post .pp-content a:hover a {
-  transition: all 0.5s;
-  color: #fff !important;
-}
+
 .university {
   margin-top: 135px;
   margin-bottom: 135px;
@@ -1414,6 +1411,30 @@ a {
   opacity: 0.8;
   color: #fff;
   transition: all 0.5s;
+}
+
+.admin-nav-header a {
+  font-weight: bold;
+}
+
+.admin-infor-page {
+  margin-top: 50px;
+}
+.admin-infor-page .sidebar-admin .admin-function ul {
+  border-bottom: none !important;
+}
+.admin-infor-page .sidebar-admin .admin-function ul li a {
+  margin-top: 10px;
+  padding-left: 10px;
+}
+.admin-infor-page .sidebar-admin .admin-function ul li a i {
+  padding-right: 10px;
+  font-weight: 600;
+}
+.admin-infor-page .sidebar-admin .admin-function ul li .active {
+  background: none;
+  border: 1px solid #909090;
+  font-weight: 600;
 }
 
 .user-submit-form {
